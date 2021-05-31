@@ -1,0 +1,10 @@
+C:\Users\cihat\OneDrive\Masaüstü\DiyetisyenApp\DiyetisyenApp\bin\Debug\DiyetisyenApp.exe.config
+C:\Users\cihat\OneDrive\Masaüstü\DiyetisyenApp\DiyetisyenApp\bin\Debug\DiyetisyenApp.exe
+C:\Users\cihat\OneDrive\Masaüstü\DiyetisyenApp\DiyetisyenApp\bin\Debug\DiyetisyenApp.pdb
+C:\Users\cihat\OneDrive\Masaüstü\DiyetisyenApp\DiyetisyenApp\obj\Debug\DiyetisyenApp.csprojAssemblyReference.cache
+C:\Users\cihat\OneDrive\Masaüstü\DiyetisyenApp\DiyetisyenApp\obj\Debug\DiyetisyenApp.Form1.resources
+C:\Users\cihat\OneDrive\Masaüstü\DiyetisyenApp\DiyetisyenApp\obj\Debug\DiyetisyenApp.Properties.Resources.resources
+C:\Users\cihat\OneDrive\Masaüstü\DiyetisyenApp\DiyetisyenApp\obj\Debug\DiyetisyenApp.csproj.GenerateResource.cache
+C:\Users\cihat\OneDrive\Masaüstü\DiyetisyenApp\DiyetisyenApp\obj\Debug\DiyetisyenApp.csproj.CoreCompileInputs.cache
+C:\Users\cihat\OneDrive\Masaüstü\DiyetisyenApp\DiyetisyenApp\obj\Debug\DiyetisyenApp.exe
+C:\Users\cihat\OneDrive\Masaüstü\DiyetisyenApp\DiyetisyenApp\obj\Debug\DiyetisyenApp.pdb
