@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Akdeniz.cs" />
+    <Compile Include="Colyak.cs" />
     <Compile Include="DenizUrunleri.cs" />
     <Compile Include="DiyetFabrikasi.cs" />
     <Compile Include="Diyetler.cs" />
@@ -57,9 +58,14 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="GlutenFree.cs" />
+    <Compile Include="HastaFabrikasi.cs" />
+    <Compile Include="Hastaliklar.cs" />
     <Compile Include="IDiyetTipi.cs" />
+    <Compile Include="IHastalikTipi.cs" />
+    <Compile Include="Obez.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SekerHastalik.cs" />
     <Compile Include="YesilliklerDunya.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

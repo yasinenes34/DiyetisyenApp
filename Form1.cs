@@ -24,5 +24,13 @@ namespace DiyetisyenApp
             diyet1.Diyet();
             MessageBox.Show(diyet1.ToString());
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            HastaFabrikasi Hfabrika = new HastaFabrikasi();
+            IHastalikTipi hasta = Hfabrika.hastaOlustur("Şeker");
+            hasta.hastalik();
+            MessageBox.Show(hasta.ToString());
+        }
     }
 }
