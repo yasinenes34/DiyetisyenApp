@@ -4,7 +4,20 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DiyetisyenDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="DiyetisyenDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="HastaTable">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="adi" Type="varchar" MaxLength="100" />
+          <Property Name="soyadi" Type="varchar" MaxLength="100" />
+          <Property Name="tc" Type="varchar" MaxLength="100" />
+          <Property Name="yas" Type="int" />
+          <Property Name="kilo" Type="int" />
+          <Property Name="hastalikTipi" Type="varchar" MaxLength="100" />
+          <Property Name="uygulanacakDiyet" Type="varchar" MaxLength="100" />
+        </EntityType>
         <EntityType Name="KullaniciRole">
           <Key>
             <PropertyRef Name="Id" />
@@ -56,6 +69,7 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="DiyetisyenDBModelStoreContainer">
+          <EntitySet Name="HastaTable" EntityType="Self.HastaTable" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="KullaniciRole" EntityType="Self.KullaniciRole" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="KullaniciTable" EntityType="Self.KullaniciTable" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
@@ -68,8 +82,7 @@
             <End Role="KullaniciRole" EntitySet="KullaniciRole" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DiyetisyenDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -139,7 +152,21 @@
             <End Role="Roles" EntitySet="Roles" />
             <End Role="KullaniciRole" EntitySet="KullaniciRoles" />
           </AssociationSet>
+          <EntitySet Name="HastaTables" EntityType="DiyetisyenDBModel.HastaTable" />
         </EntityContainer>
+        <EntityType Name="HastaTable">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="adi" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="soyadi" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="tc" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="yas" Type="Int32" />
+          <Property Name="kilo" Type="Int32" />
+          <Property Name="hastalikTipi" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="uygulanacakDiyet" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -172,6 +199,20 @@
               <MappingFragment StoreEntitySet="Roles">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HastaTables">
+            <EntityTypeMapping TypeName="DiyetisyenDBModel.HastaTable">
+              <MappingFragment StoreEntitySet="HastaTable">
+                <ScalarProperty Name="uygulanacakDiyet" ColumnName="uygulanacakDiyet" />
+                <ScalarProperty Name="hastalikTipi" ColumnName="hastalikTipi" />
+                <ScalarProperty Name="kilo" ColumnName="kilo" />
+                <ScalarProperty Name="yas" ColumnName="yas" />
+                <ScalarProperty Name="tc" ColumnName="tc" />
+                <ScalarProperty Name="soyadi" ColumnName="soyadi" />
+                <ScalarProperty Name="adi" ColumnName="adi" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

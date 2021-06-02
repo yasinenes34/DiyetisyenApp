@@ -6,10 +6,11 @@
     <edmx:Diagrams>
       <Diagram DiagramId="63c84e060cd34d4f9af8d52de81ea93e" Name="Diagram1">
         <EntityTypeShape EntityType="DiyetisyenDBModel.KullaniciRole" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="DiyetisyenDBModel.KullaniciTable" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="DiyetisyenDBModel.Role" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DiyetisyenDBModel.KullaniciTable" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DiyetisyenDBModel.Role" Width="1.5" PointX="3" PointY="4.25" IsExpanded="true" />
         <AssociationConnector Association="DiyetisyenDBModel.FK_UserRole_KullaniciTable" ManuallyRouted="false" />
         <AssociationConnector Association="DiyetisyenDBModel.FK_UserRole_Roles" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DiyetisyenDBModel.HastaTable" Width="1.5" PointX="5.375" PointY="1.125" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

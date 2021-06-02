@@ -28,5 +28,6 @@ namespace DiyetisyenApp.DB
         public virtual DbSet<KullaniciRole> KullaniciRoles { get; set; }
         public virtual DbSet<KullaniciTable> KullaniciTables { get; set; }
         public virtual DbSet<Role> Roles { get; set; }
+        public virtual DbSet<HastaTable> HastaTables { get; set; }
     }
 }
