@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DiyetisyenApp
 {
-    class Colyak:IHastalikTipi
+    public class Colyak:IHastalikTipi
     {
         public string hastalik()
         {

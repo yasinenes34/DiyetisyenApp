@@ -67,13 +67,13 @@
     <Compile Include="Admin\DiyetisyenEkleForm.Designer.cs">
       <DependentUpon>DiyetisyenEkleForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Akdeniz.cs" />
-    <Compile Include="Colyak.cs" />
+    <Compile Include="Diyet Fabrika\Akdeniz.cs" />
+    <Compile Include="Hastalik Fabrika\Colyak.cs" />
     <Compile Include="DB\HastaTable.cs">
       <DependentUpon>DiyetisyenModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DenizUrunleri.cs" />
-    <Compile Include="DiyetFabrikasi.cs" />
+    <Compile Include="Diyet Fabrika\DenizUrunleri.cs" />
+    <Compile Include="Diyet Fabrika\DiyetFabrikasi.cs" />
     <Compile Include="DB\DiyetisyenModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -101,27 +101,25 @@
     <Compile Include="Diyetisyen\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Diyetler.cs" />
-    <Compile Include="GlutenFree.cs" />
-    <Compile Include="HastaFabrikasi.cs" />
-    <Compile Include="Hastaliklar.cs" />
-    <Compile Include="IDiyetTipi.cs" />
-    <Compile Include="IHastalikTipi.cs" />
+    <Compile Include="Diyet Fabrika\GlutenFree.cs" />
+    <Compile Include="Hastalik Fabrika\HastaFabrikasi.cs" />
+    <Compile Include="Diyet Fabrika\IDiyetTipi.cs" />
+    <Compile Include="Hastalik Fabrika\IHastalikTipi.cs" />
     <Compile Include="DB\KullaniciRole.cs">
       <DependentUpon>DiyetisyenModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\KullaniciTable.cs">
       <DependentUpon>DiyetisyenModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Obez.cs" />
+    <Compile Include="Hastalik Fabrika\Obez.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DB\Role.cs">
       <DependentUpon>DiyetisyenModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="SekerHastalik.cs" />
+    <Compile Include="Hastalik Fabrika\SekerHastalik.cs" />
     <Compile Include="yaziSartlari.cs" />
-    <Compile Include="YesilliklerDunya.cs" />
+    <Compile Include="Diyet Fabrika\YesilliklerDunya.cs" />
     <EmbeddedResource Include="Admin\AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -187,5 +185,6 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

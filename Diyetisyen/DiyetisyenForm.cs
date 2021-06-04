@@ -64,6 +64,16 @@ namespace DiyetisyenApp
                    hastalikTipi = CB_Hastalik_Tipi.Text,
                    uygulanacakDiyet = CB_Uygulanacak_Diyet.Text
                 };
+
+
+                //diyet ve hastalik fabrikalari uygulamasi
+                IHastalikTipi hastalik = HastaFabrikasi.HastaOlustur(CB_Hastalik_Tipi.Text);
+                IDiyetTipi diyet = DiyetFabrikasi.DiyetOlustur(CB_Uygulanacak_Diyet.Text);
+                // factory implementation -------------------------
+                MessageBox.Show(hastalik.hastalik(), "Hastalik", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(diyet.Diyet(), "Diyet", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //-------------------------------------------------
+
                 _db.HastaTables.Add(hasta);       
                 _db.SaveChanges();
                  MessageBox.Show("Hasta Kaydı ve Diyet Atama Başarıyla Tamamlanmıştır!", "Kayıt Tamamlandı", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -126,5 +136,10 @@ namespace DiyetisyenApp
             }
             
         }
+
+
+
+
+
     }
 }

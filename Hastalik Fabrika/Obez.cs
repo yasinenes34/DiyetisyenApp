@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace DiyetisyenApp
 {
-    class SekerHastalik:IHastalikTipi
+    public class Obez:IHastalikTipi
     {
         public string hastalik()
         {
-            return this.sekerHastalik();
+            return this.obezHastalik();
         }
-        private string sekerHastalik()
+        private string obezHastalik()
         {
-            return "Şeker Hastalığı";
+            return "Obez Hastalığı";
         }
     }
 }

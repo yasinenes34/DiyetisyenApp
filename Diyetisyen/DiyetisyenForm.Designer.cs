@@ -31,15 +31,25 @@ namespace DiyetisyenApp
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.CB_Uygulanacak_Diyet = new System.Windows.Forms.ComboBox();
-            this.CB_Hastalik_Tipi = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.HastaList = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label9 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.CB_Uygulanacak_Diyet = new System.Windows.Forms.ComboBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.CB_Hastalik_Tipi = new System.Windows.Forms.ComboBox();
             this.txt_hasta_yas = new System.Windows.Forms.TextBox();
+            this.btnHastaEkle = new System.Windows.Forms.Button();
             this.txt_hasta_kilo = new System.Windows.Forms.TextBox();
             this.txt_hasta_tc = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.txt_hasta_soyad = new System.Windows.Forms.TextBox();
             this.txt_hasta_ad = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -50,19 +60,9 @@ namespace DiyetisyenApp
             this.lbl_Diyetisyen_Adi = new System.Windows.Forms.Label();
             this.lblClose = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.btnHastaEkle = new System.Windows.Forms.Button();
-            this.label14 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.HastaList = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label9 = new System.Windows.Forms.Label();
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -86,40 +86,74 @@ namespace DiyetisyenApp
             this.panel1.Size = new System.Drawing.Size(1385, 861);
             this.panel1.TabIndex = 2;
             // 
-            // CB_Uygulanacak_Diyet
+            // button1
             // 
-            this.CB_Uygulanacak_Diyet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
-            this.CB_Uygulanacak_Diyet.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CB_Uygulanacak_Diyet.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CB_Uygulanacak_Diyet.ForeColor = System.Drawing.Color.White;
-            this.CB_Uygulanacak_Diyet.FormattingEnabled = true;
-            this.CB_Uygulanacak_Diyet.Items.AddRange(new object[] {
-            "Akdeniz",
-            "Gulten Free",
-            "Deniz Ürünleri",
-            "Yeşillikler Dünyası"});
-            this.CB_Uygulanacak_Diyet.Location = new System.Drawing.Point(272, 502);
-            this.CB_Uygulanacak_Diyet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.CB_Uygulanacak_Diyet.Name = "CB_Uygulanacak_Diyet";
-            this.CB_Uygulanacak_Diyet.Size = new System.Drawing.Size(268, 37);
-            this.CB_Uygulanacak_Diyet.TabIndex = 24;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(103)))), ((int)(((byte)(46)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(710, 532);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(608, 46);
+            this.button1.TabIndex = 54;
+            this.button1.Text = "Rapor Yazdır";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // CB_Hastalik_Tipi
+            // HastaList
             // 
-            this.CB_Hastalik_Tipi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
-            this.CB_Hastalik_Tipi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CB_Hastalik_Tipi.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CB_Hastalik_Tipi.ForeColor = System.Drawing.Color.White;
-            this.CB_Hastalik_Tipi.FormattingEnabled = true;
-            this.CB_Hastalik_Tipi.Items.AddRange(new object[] {
-            "Obez",
-            "Çölyak",
-            "Şeker"});
-            this.CB_Hastalik_Tipi.Location = new System.Drawing.Point(272, 449);
-            this.CB_Hastalik_Tipi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.CB_Hastalik_Tipi.Name = "CB_Hastalik_Tipi";
-            this.CB_Hastalik_Tipi.Size = new System.Drawing.Size(268, 37);
-            this.CB_Hastalik_Tipi.TabIndex = 24;
+            this.HastaList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(39)))));
+            this.HastaList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4});
+            this.HastaList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HastaList.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.HastaList.FullRowSelect = true;
+            this.HastaList.HideSelection = false;
+            this.HastaList.Location = new System.Drawing.Point(710, 155);
+            this.HastaList.Margin = new System.Windows.Forms.Padding(4);
+            this.HastaList.MultiSelect = false;
+            this.HastaList.Name = "HastaList";
+            this.HastaList.Size = new System.Drawing.Size(608, 355);
+            this.HastaList.TabIndex = 46;
+            this.HastaList.UseCompatibleStateImageBehavior = false;
+            this.HastaList.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Id";
+            this.columnHeader1.Width = 50;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Hastanın Adi";
+            this.columnHeader2.Width = 150;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Hastalık Tipi";
+            this.columnHeader3.Width = 150;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Ugulanan Diyet";
+            this.columnHeader4.Width = 150;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(870, 106);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(226, 32);
+            this.label9.TabIndex = 45;
+            this.label9.Text = "Kayıtlı Hastalar";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel3
             // 
@@ -146,6 +180,24 @@ namespace DiyetisyenApp
             this.panel3.Size = new System.Drawing.Size(617, 719);
             this.panel3.TabIndex = 9;
             // 
+            // CB_Uygulanacak_Diyet
+            // 
+            this.CB_Uygulanacak_Diyet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
+            this.CB_Uygulanacak_Diyet.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CB_Uygulanacak_Diyet.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CB_Uygulanacak_Diyet.ForeColor = System.Drawing.Color.White;
+            this.CB_Uygulanacak_Diyet.FormattingEnabled = true;
+            this.CB_Uygulanacak_Diyet.Items.AddRange(new object[] {
+            "Deniz Ürünleri",
+            "Yeşillikler Dünyası",
+            "Gluten Free",
+            "Akdeniz"});
+            this.CB_Uygulanacak_Diyet.Location = new System.Drawing.Point(272, 502);
+            this.CB_Uygulanacak_Diyet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.CB_Uygulanacak_Diyet.Name = "CB_Uygulanacak_Diyet";
+            this.CB_Uygulanacak_Diyet.Size = new System.Drawing.Size(268, 37);
+            this.CB_Uygulanacak_Diyet.TabIndex = 24;
+            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
@@ -153,6 +205,23 @@ namespace DiyetisyenApp
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(432, 3);
             this.panel4.TabIndex = 10;
+            // 
+            // CB_Hastalik_Tipi
+            // 
+            this.CB_Hastalik_Tipi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
+            this.CB_Hastalik_Tipi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CB_Hastalik_Tipi.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CB_Hastalik_Tipi.ForeColor = System.Drawing.Color.White;
+            this.CB_Hastalik_Tipi.FormattingEnabled = true;
+            this.CB_Hastalik_Tipi.Items.AddRange(new object[] {
+            "Obez",
+            "Çölyak",
+            "Şeker"});
+            this.CB_Hastalik_Tipi.Location = new System.Drawing.Point(272, 449);
+            this.CB_Hastalik_Tipi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.CB_Hastalik_Tipi.Name = "CB_Hastalik_Tipi";
+            this.CB_Hastalik_Tipi.Size = new System.Drawing.Size(268, 37);
+            this.CB_Hastalik_Tipi.TabIndex = 24;
             // 
             // txt_hasta_yas
             // 
@@ -168,6 +237,22 @@ namespace DiyetisyenApp
             this.txt_hasta_yas.Size = new System.Drawing.Size(326, 34);
             this.txt_hasta_yas.TabIndex = 53;
             this.txt_hasta_yas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_hasta_yas_KeyPress);
+            // 
+            // btnHastaEkle
+            // 
+            this.btnHastaEkle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(103)))), ((int)(((byte)(46)))));
+            this.btnHastaEkle.FlatAppearance.BorderSize = 0;
+            this.btnHastaEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHastaEkle.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHastaEkle.ForeColor = System.Drawing.Color.White;
+            this.btnHastaEkle.Location = new System.Drawing.Point(34, 637);
+            this.btnHastaEkle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnHastaEkle.Name = "btnHastaEkle";
+            this.btnHastaEkle.Size = new System.Drawing.Size(549, 62);
+            this.btnHastaEkle.TabIndex = 5;
+            this.btnHastaEkle.Text = "Onayla";
+            this.btnHastaEkle.UseVisualStyleBackColor = false;
+            this.btnHastaEkle.Click += new System.EventHandler(this.btnHastaEkle_Click);
             // 
             // txt_hasta_kilo
             // 
@@ -199,6 +284,18 @@ namespace DiyetisyenApp
             this.txt_hasta_tc.TabIndex = 51;
             this.txt_hasta_tc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_hasta_tc_KeyPress);
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(29, 505);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(237, 28);
+            this.label8.TabIndex = 10;
+            this.label8.Text = "Uygulanacak Diyet:";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // txt_hasta_soyad
             // 
             this.txt_hasta_soyad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(61)))), ((int)(((byte)(77)))));
@@ -226,6 +323,18 @@ namespace DiyetisyenApp
             this.txt_hasta_ad.Name = "txt_hasta_ad";
             this.txt_hasta_ad.Size = new System.Drawing.Size(326, 34);
             this.txt_hasta_ad.TabIndex = 49;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(29, 452);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(165, 28);
+            this.label14.TabIndex = 10;
+            this.label14.Text = "Hastalık Tipi:";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label7
             // 
@@ -344,46 +453,6 @@ namespace DiyetisyenApp
             this.label1.Text = "Merhabalar,";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(29, 505);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(237, 28);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "Uygulanacak Diyet:";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnHastaEkle
-            // 
-            this.btnHastaEkle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(103)))), ((int)(((byte)(46)))));
-            this.btnHastaEkle.FlatAppearance.BorderSize = 0;
-            this.btnHastaEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHastaEkle.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHastaEkle.ForeColor = System.Drawing.Color.White;
-            this.btnHastaEkle.Location = new System.Drawing.Point(34, 637);
-            this.btnHastaEkle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnHastaEkle.Name = "btnHastaEkle";
-            this.btnHastaEkle.Size = new System.Drawing.Size(549, 62);
-            this.btnHastaEkle.TabIndex = 5;
-            this.btnHastaEkle.Text = "Onayla";
-            this.btnHastaEkle.UseVisualStyleBackColor = false;
-            this.btnHastaEkle.Click += new System.EventHandler(this.btnHastaEkle_Click);
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(29, 452);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(165, 28);
-            this.label14.TabIndex = 10;
-            this.label14.Text = "Hastalık Tipi:";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
@@ -395,75 +464,6 @@ namespace DiyetisyenApp
             // errorProvider3
             // 
             this.errorProvider3.ContainerControl = this;
-            // 
-            // HastaList
-            // 
-            this.HastaList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(39)))));
-            this.HastaList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4});
-            this.HastaList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HastaList.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.HastaList.FullRowSelect = true;
-            this.HastaList.HideSelection = false;
-            this.HastaList.Location = new System.Drawing.Point(710, 155);
-            this.HastaList.Margin = new System.Windows.Forms.Padding(4);
-            this.HastaList.MultiSelect = false;
-            this.HastaList.Name = "HastaList";
-            this.HastaList.Size = new System.Drawing.Size(608, 355);
-            this.HastaList.TabIndex = 46;
-            this.HastaList.UseCompatibleStateImageBehavior = false;
-            this.HastaList.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Id";
-            this.columnHeader1.Width = 50;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Hastanın Adi";
-            this.columnHeader2.Width = 150;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Hastalık Tipi";
-            this.columnHeader3.Width = 150;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(870, 106);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(226, 32);
-            this.label9.TabIndex = 45;
-            this.label9.Text = "Kayıtlı Hastalar";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Ugulanan Diyet";
-            this.columnHeader4.Width = 150;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(103)))), ((int)(((byte)(46)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(710, 532);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(608, 46);
-            this.button1.TabIndex = 54;
-            this.button1.Text = "Rapor Yazdır";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // DiyetForm
             // 

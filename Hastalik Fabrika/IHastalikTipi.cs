@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace DiyetisyenApp
 {
-    interface IHastalikTipi
+    public interface IHastalikTipi
     {
         string hastalik();
-    }
+    }  
 }
