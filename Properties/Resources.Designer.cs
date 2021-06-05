@@ -63,6 +63,16 @@ namespace DiyetisyenApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap exit_52px {
+            get {
+                object obj = ResourceManager.GetObject("exit_52px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_back {
             get {
                 object obj = ResourceManager.GetObject("icons8_back", resourceCulture);

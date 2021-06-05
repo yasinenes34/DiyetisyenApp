@@ -74,5 +74,12 @@ namespace DiyetisyenApp
         {
             this.Close();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            AdminForm a = new AdminForm();
+            this.Hide();
+            a.Show();
+        }
     }
 }

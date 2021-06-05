@@ -63,12 +63,14 @@ namespace DiyetisyenApp
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -125,18 +127,18 @@ namespace DiyetisyenApp
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "Id";
-            this.columnHeader1.Width = 50;
+            this.columnHeader1.Text = "Adi:";
+            this.columnHeader1.Width = 100;
             // 
             // columnHeader2
             // 
-            this.columnHeader2.Text = "Hastanın Adi";
-            this.columnHeader2.Width = 150;
+            this.columnHeader2.Text = "Soyadi:";
+            this.columnHeader2.Width = 100;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "Hastalık Tipi";
-            this.columnHeader3.Width = 150;
+            this.columnHeader3.Width = 125;
             // 
             // columnHeader4
             // 
@@ -192,7 +194,7 @@ namespace DiyetisyenApp
             "Yeşillikler Dünyası",
             "Gluten Free",
             "Akdeniz"});
-            this.CB_Uygulanacak_Diyet.Location = new System.Drawing.Point(272, 502);
+            this.CB_Uygulanacak_Diyet.Location = new System.Drawing.Point(285, 502);
             this.CB_Uygulanacak_Diyet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CB_Uygulanacak_Diyet.Name = "CB_Uygulanacak_Diyet";
             this.CB_Uygulanacak_Diyet.Size = new System.Drawing.Size(268, 37);
@@ -217,7 +219,7 @@ namespace DiyetisyenApp
             "Obez",
             "Çölyak",
             "Şeker"});
-            this.CB_Hastalik_Tipi.Location = new System.Drawing.Point(272, 449);
+            this.CB_Hastalik_Tipi.Location = new System.Drawing.Point(285, 449);
             this.CB_Hastalik_Tipi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CB_Hastalik_Tipi.Name = "CB_Hastalik_Tipi";
             this.CB_Hastalik_Tipi.Size = new System.Drawing.Size(268, 37);
@@ -411,6 +413,7 @@ namespace DiyetisyenApp
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(183)))), ((int)(((byte)(19)))));
+            this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.lbl_Diyetisyen_Adi);
             this.panel2.Controls.Add(this.lblClose);
             this.panel2.Controls.Add(this.label1);
@@ -424,7 +427,7 @@ namespace DiyetisyenApp
             // 
             this.lbl_Diyetisyen_Adi.AutoSize = true;
             this.lbl_Diyetisyen_Adi.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Diyetisyen_Adi.Location = new System.Drawing.Point(200, 18);
+            this.lbl_Diyetisyen_Adi.Location = new System.Drawing.Point(615, 18);
             this.lbl_Diyetisyen_Adi.Name = "lbl_Diyetisyen_Adi";
             this.lbl_Diyetisyen_Adi.Size = new System.Drawing.Size(230, 34);
             this.lbl_Diyetisyen_Adi.TabIndex = 2;
@@ -434,10 +437,10 @@ namespace DiyetisyenApp
             // lblClose
             // 
             this.lblClose.AutoSize = true;
-            this.lblClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClose.Location = new System.Drawing.Point(1337, 9);
+            this.lblClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClose.Location = new System.Drawing.Point(1331, 12);
             this.lblClose.Name = "lblClose";
-            this.lblClose.Size = new System.Drawing.Size(27, 25);
+            this.lblClose.Size = new System.Drawing.Size(41, 39);
             this.lblClose.TabIndex = 1;
             this.lblClose.Text = "X";
             this.lblClose.Click += new System.EventHandler(this.lblClose_Click);
@@ -446,7 +449,7 @@ namespace DiyetisyenApp
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 18);
+            this.label1.Location = new System.Drawing.Point(426, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(192, 34);
             this.label1.TabIndex = 0;
@@ -464,6 +467,17 @@ namespace DiyetisyenApp
             // errorProvider3
             // 
             this.errorProvider3.ContainerControl = this;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::DiyetisyenApp.Properties.Resources.exit_52px;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(40, 42);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // DiyetForm
             // 
@@ -485,6 +499,7 @@ namespace DiyetisyenApp
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -524,5 +539,6 @@ namespace DiyetisyenApp
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

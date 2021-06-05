@@ -39,15 +39,34 @@ namespace DiyetisyenApp
             {
                 if (l.TC != null)
                 {
-                    ListViewItem addDiyetisyen = new ListViewItem(l.Id.ToString());
-                    addDiyetisyen.SubItems.Add(l.KullaniciAdi);
+                    ListViewItem addDiyetisyen = new ListViewItem(l.KullaniciAdi);
+                    addDiyetisyen.SubItems.Add(l.Sifre);
                     addDiyetisyen.SubItems.Add(l.TC);
                     DiyetisyenList.Items.Add(addDiyetisyen);
                 }
             }
 
+            var hastaList = _db.HastaTables.ToList();
+            foreach (var l in hastaList)
+            {
+
+                ListViewItem addhasta = new ListViewItem(l.adi + " " + l.soyadi);
+                addhasta.SubItems.Add(l.hastalikTipi);
+                addhasta.SubItems.Add(l.uygulanacakDiyet);
+                addhasta.SubItems.Add(l.doktorAdi);
+                HastaList.Items.Add(addhasta);
+
+            }
 
 
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            LoginForm k = new LoginForm();
+            this.Hide();
+            k.Show();
         }
     }
 }

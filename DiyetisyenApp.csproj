@@ -174,13 +174,14 @@
       <DependentUpon>DiyetisyenModel.edmx</DependentUpon>
       <LastGenOutput>DiyetisyenModel.cs</LastGenOutput>
     </Content>
-    <Content Include="icons\png%40400x.png" />
-    <Content Include="icons\icons8_back.png" />
-    <Content Include="icons\icons8_back_new_64.png" />
-    <Content Include="icons\icons8_back_to_16.png" />
-    <Content Include="icons\icons8_identity_theft_64.png" />
-    <Content Include="icons\icons8_lock_64.png" />
-    <Content Include="icons\icons8_user_64.png" />
+    <Content Include="Resources\png%40400x.png" />
+    <Content Include="Resources\icons8_back.png" />
+    <Content Include="Resources\icons8_back_new_64.png" />
+    <Content Include="Resources\icons8_back_to_16.png" />
+    <Content Include="Resources\icons8_identity_theft_64.png" />
+    <Content Include="Resources\icons8_lock_64.png" />
+    <Content Include="Resources\icons8_user_64.png" />
+    <None Include="Resources\exit_52px.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

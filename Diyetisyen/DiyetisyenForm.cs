@@ -26,13 +26,12 @@ namespace DiyetisyenApp
         private void DiyetForm_Load(object sender, EventArgs e)
         {
             lbl_Diyetisyen_Adi.Text = _diyetisyenAdi;
-
-            var hastaList = _db.HastaTables.ToList();
+            var hastaList = _db.HastaTables.Where(q => q.doktorAdi == _diyetisyenAdi).ToList();
             foreach (var l in hastaList)
             {
                
-                ListViewItem addhasta = new ListViewItem(l.Id.ToString());
-                addhasta.SubItems.Add(l.adi);
+                ListViewItem addhasta = new ListViewItem(l.adi);
+                addhasta.SubItems.Add(l.soyadi);
                 addhasta.SubItems.Add(l.hastalikTipi);
                 addhasta.SubItems.Add(l.uygulanacakDiyet);
                 HastaList.Items.Add(addhasta);
@@ -56,13 +55,14 @@ namespace DiyetisyenApp
             {
                 var hasta = new HastaTable
                 {
-                   adi =  txt_hasta_ad.Text,
-                   kilo = int.Parse(txt_hasta_kilo.Text) ,
-                   soyadi =  txt_hasta_soyad.Text,
-                   tc =  txt_hasta_tc.Text,
-                   yas= int.Parse(txt_hasta_yas.Text),
-                   hastalikTipi = CB_Hastalik_Tipi.Text,
-                   uygulanacakDiyet = CB_Uygulanacak_Diyet.Text
+                    adi = txt_hasta_ad.Text,
+                    kilo = int.Parse(txt_hasta_kilo.Text),
+                    soyadi = txt_hasta_soyad.Text,
+                    tc = txt_hasta_tc.Text,
+                    yas = int.Parse(txt_hasta_yas.Text),
+                    hastalikTipi = CB_Hastalik_Tipi.Text,
+                    uygulanacakDiyet = CB_Uygulanacak_Diyet.Text,
+                    doktorAdi = _diyetisyenAdi
                 };
 
 
@@ -83,16 +83,13 @@ namespace DiyetisyenApp
                  txt_hasta_tc.Text = "";
                  txt_hasta_yas.Text = "";
             }
-            if (HastaList.SelectedItems.Count>0)
-            {
-                HastaList.Items.Clear();
-            }
-            var hastaList = _db.HastaTables.ToList();
+            //update the list when adding new patient 
+            HastaList.Items.Clear();
+            var hastaList = _db.HastaTables.Where(q => q.doktorAdi == _diyetisyenAdi).ToList();
             foreach (var l in hastaList)
             {
-
-                ListViewItem addhasta = new ListViewItem(l.Id.ToString());
-                addhasta.SubItems.Add(l.adi);
+                ListViewItem addhasta = new ListViewItem(l.adi);
+                addhasta.SubItems.Add(l.soyadi);
                 addhasta.SubItems.Add(l.hastalikTipi);
                 addhasta.SubItems.Add(l.uygulanacakDiyet);
                 HastaList.Items.Add(addhasta);
@@ -120,7 +117,7 @@ namespace DiyetisyenApp
         {
             if (HastaList.SelectedItems.Count >0)
             {
-                int id = int.Parse( HastaList.SelectedItems[0].SubItems[0].Text);
+                /*int id = int.Parse( HastaList.SelectedItems[0].SubItems[0].Text);
                 var getHasta = _db.HastaTables.Find(id);
 
                 MessageBox.Show(getHasta.adi);
@@ -132,14 +129,17 @@ namespace DiyetisyenApp
                 var hastaDiyet = getHasta.uygulanacakDiyet;
                 var hastaHastalik = getHasta.hastalikTipi;
 
-                // print paitent data to json and html report 
+                print paitent data to json and html report 
+                */
             }
             
         }
 
-
-
-
-
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            LoginForm k = new LoginForm();
+            this.Hide();
+            k.Show();
+        }
     }
 }

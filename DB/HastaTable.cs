@@ -22,5 +22,6 @@ namespace DiyetisyenApp.DB
         public Nullable<int> kilo { get; set; }
         public string hastalikTipi { get; set; }
         public string uygulanacakDiyet { get; set; }
+        public string doktorAdi { get; set; }
     }
 }
